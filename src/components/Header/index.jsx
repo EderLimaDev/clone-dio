@@ -13,12 +13,15 @@ const Header = ({autenticado}) => {
   const handleClickCadastrar = () => {
     navigate('/cadastro')
   }
+  const handleReturnHome = () => {
+    navigate("/")
+  }
 
   return (
     <Wrapper>
       <Container>
           <Row>
-            <img src={logo} alt="Logo da dio"/>
+            <img src={logo} alt="Logo da dio" onClick={handleReturnHome}/>
             {autenticado ? (
               <>
                <BuscarInputContainer>
